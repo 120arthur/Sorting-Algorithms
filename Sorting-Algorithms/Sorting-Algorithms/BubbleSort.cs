@@ -6,7 +6,7 @@ namespace Sorting_Algorithms
     {
         public List<int> NumberOrdering(List<int> list)
         {
-            int size = list.Count;
+            var size = list.Count;
             for (var i = size - 1; i >= 1; i--)
             {
                 for (var j = 0; j < i; j++)
