@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
+﻿using System.Collections.Generic;
 
 namespace Sorting_Algorithms
 {
-    public class SelectionSort
+      public class SelectionSort
     {
         public List<int> NumberOrdering(List<int> list)
         {
@@ -13,11 +10,15 @@ namespace Sorting_Algorithms
             for (int i = 0; i < list.Count; i++)
             {
                 min = i;
-                for (var j = i + 1; j < list.Count; j++)
+                for (int j = i + 1; j < list.Count; j++)
                     if (list[j] < list[min])
                         min = j;
-                
+
+
                 if (min == i) continue;
+                aux = list[min];
+                list[min] = list[i];
+                list[i] = aux;
             }
 
             return list;

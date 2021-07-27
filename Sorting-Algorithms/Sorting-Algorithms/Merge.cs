@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sorting_Algorithms
 {
@@ -26,8 +23,6 @@ namespace Sorting_Algorithms
             {
                 right.Add(list[i]);
             }
-            Console.WriteLine($"Quick Sort list: ({string.Join(", ",  right)}).");
-            Console.WriteLine($"Quick Sort list: ({string.Join(", ",left)}).");
            left = NumberOrdering(left);
            right = NumberOrdering(right);
             return MergeList(left, right);
